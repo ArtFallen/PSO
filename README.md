@@ -49,9 +49,9 @@ El diseño es modular, claro y extensible, facilitando futuras mejoras como nuev
 ## ⚙️ Requisitos
 
 - Python 3.8+
-- numpy
-- matplotlib (para visualizaciones)
-- pytest (para correr tests)
+- Numpy
+- Matplotlib (para visualizaciones)
+- Pytest (para correr tests)
 
 Instalación de dependencias (opcional):
 
