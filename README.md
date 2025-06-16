@@ -71,9 +71,9 @@ Esto inicializa varios enjambres con diferentes funciones objetivo y dimensiones
 
 ## 🧪 Tests
 Para correr los tests unitarios:
-
+```cmd
 pytest tests/test_swarm.py
-
+```
 Esto valida:
 
 Correcta ejecución de PSO en:
