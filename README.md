@@ -83,3 +83,16 @@ Correcta ejecución de PSO en:
 - 2 dimensiones (funciones: Rastrigin, Sphere, Griewank, Styblinski-Tang).
 
 Convergencia esperada (mínimos locales o globales conocidos).
+
+## 📊 Visualización
+
+Las funciones de visualización están disponibles en `utils.py` (en desarrollo):
+
+```python
+plot_2d_particles(swarm.complete_swarm, swarm.fitness_function, lower_limit, upper_limit)
+plot_3d_surface_with_particles(swarm.complete_swarm, swarm.fitness_function, lower_limit, upper_limit)
+```
+Estas permiten graficar:
+
+- La posición actual de las partículas en el espacio de búsqueda.
+- La función objetivo evaluada en 2D o 3D junto a las partículas.
