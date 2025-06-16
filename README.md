@@ -74,6 +74,10 @@ Para correr los tests unitarios:
 ```cmd
 pytest tests/test_swarm.py
 ```
+o
+```cmd
+python -m tests.test_swarm
+```
 Esto valida:
 
 Correcta ejecución de PSO en:
