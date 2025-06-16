@@ -56,14 +56,14 @@ pso_project/
 Instalación de dependencias (opcional):
 
 ```bash
-pip install numpy matplotlib pytest
+pip install numpy matplotlib pytest```
 
 ## **🎮 Ejecución**
 
 Para correr el ejemplo principal:
 
 ```bash
-python -m src.main
+python -m src.main```
 
 Esto inicializa varios enjambres con diferentes funciones objetivo y dimensiones, ejecutando PSO para cada uno.
 
