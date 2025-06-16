@@ -100,3 +100,6 @@ Estas permiten graficar:
 
 - La posición actual de las partículas en el espacio de búsqueda.
 - La función objetivo evaluada en 2D o 3D junto a las partículas.
+
+## Fuentes de consulta: 
+https://en.wikipedia.org/wiki/Particle_swarm_optimization
