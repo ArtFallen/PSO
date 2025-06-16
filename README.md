@@ -30,19 +30,19 @@ El diseño es modular, claro y extensible, facilitando futuras mejoras como nuev
 
 ## 🏗️ Estructura del proyecto
 
-pso_project/
-│
-├── src/
-│ ├── particle.py # Clase Particle: representa una partícula individual.
-│ ├── swarm.py # Clase Swarm: representa y gestiona el enjambre completo.
-│ ├── objective_functions.py # Funciones objetivo (Rastrigin, Sphere, Griewank, Styblinski-Tang).
-│ ├── utils.py # (Opcional) Funciones de visualización 2D y 3D.
-│ └── main.py # Script principal para ejecutar experimentos PSO.
-│
-├── tests/
-│ └── test_swarm.py # Pruebas unitarias para Swarm y Particle.
-│
-└── README.md # Este archivo.
+- pso_project/
+- │
+- ├── src/
+- │ ├── particle.py # Clase Particle: representa una partícula individual.
+- │ ├── swarm.py # Clase Swarm: representa y gestiona el enjambre completo.
+- │ ├── objective_functions.py # Funciones objetivo (Rastrigin, Sphere, Griewank, Styblinski-Tang).
+- │ ├── utils.py # (Opcional) Funciones de visualización 2D y 3D.
+- │ └── main.py # Script principal para ejecutar experimentos PSO.
+- │
+- ├── tests/
+- │ └── test_swarm.py # Pruebas unitarias para Swarm y Particle.
+- │
+- └── README.md # Este archivo.
 
 ---
 
@@ -56,14 +56,16 @@ pso_project/
 Instalación de dependencias (opcional):
 
 ```bash
-pip install numpy matplotlib pytest```
+pip install numpy matplotlib pytest
+```
 
-## **🎮 Ejecución**
+## 🎮 Ejecución
 
 Para correr el ejemplo principal:
 
 ```bash
-python -m src.main```
+python -m src.main
+```
 
 Esto inicializa varios enjambres con diferentes funciones objetivo y dimensiones, ejecutando PSO para cada uno.
 
