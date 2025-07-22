@@ -90,7 +90,7 @@ Convergencia esperada (mínimos locales o globales conocidos).
 
 ## Visualización
 
-Las funciones de visualización están disponibles en `utils.py` (en desarrollo):
+Las funciones de visualización están disponibles en `utils.py`:
 
 ```python
 plot_2d_particles(swarm.complete_swarm, swarm.fitness_function, lower_limit, upper_limit)
