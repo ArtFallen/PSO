@@ -1,6 +1,6 @@
 # Particle Swarm Optimization (PSO) - Python Implementation
 
-## 📌 Descripción
+## Descripción
 
 Este proyecto implementa el algoritmo **Particle Swarm Optimization (PSO)** desde cero utilizando **Programación Orientada a Objetos (POO)** en Python.  
 El sistema permite optimizar diferentes funciones objetivo clásicas de benchmarking de optimización matemática.
@@ -9,7 +9,7 @@ El diseño es modular, claro y extensible, facilitando futuras mejoras como nuev
 
 ---
 
-## 🚀 Características
+## Características
 
 - Implementación de PSO con:
   - Configuración flexible de partículas, dimensiones, límites y funciones.
@@ -28,7 +28,7 @@ El diseño es modular, claro y extensible, facilitando futuras mejoras como nuev
 
 ---
 
-## 🏗️ Estructura del proyecto
+## Estructura del proyecto
 
 - pso_project/
 - │
@@ -46,7 +46,7 @@ El diseño es modular, claro y extensible, facilitando futuras mejoras como nuev
 
 ---
 
-## ⚙️ Requisitos
+## Requisitos
 
 - Python 3.8+
 - Numpy
@@ -59,7 +59,7 @@ Instalación de dependencias (opcional):
 pip install numpy matplotlib pytest
 ```
 
-## 🎮 Ejecución
+## Ejecución
 
 Para correr el ejemplo principal:
 
@@ -69,7 +69,7 @@ python -m src.main
 
 Esto inicializa varios enjambres con diferentes funciones objetivo y dimensiones, ejecutando PSO para cada uno.
 
-## 🧪 Tests
+## Tests
 Para correr los tests unitarios:
 ```cmd
 pytest tests/test_swarm.py
@@ -88,7 +88,7 @@ Correcta ejecución de PSO en:
 
 Convergencia esperada (mínimos locales o globales conocidos).
 
-## 📊 Visualización
+## Visualización
 
 Las funciones de visualización están disponibles en `utils.py` (en desarrollo):
 
