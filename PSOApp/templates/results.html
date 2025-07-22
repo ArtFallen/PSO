@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado del PSO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2em;
+            background-color: #f9f9f9;
+        }
+        .resultado {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2em;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #444;
+        }
+        .item {
+            margin-bottom: 1em;
+        }
+        .volver {
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="resultado">
+        <h1>Resultados del PSO</h1>
+        
+        <div class="item"><strong>Función:</strong> {{ funcion }}</div>
+        <div class="item"><strong>Iteraciones:</strong> {{ iteraciones }}</div>
+        <div class="item"><strong>Partículas:</strong> {{ particulas }}</div>
+        <div class="item"><strong>Rango:</strong> {{ minimo }} a {{ maximo }}</div>
+        <div class="item"><strong>Dimensión:</strong> {{ dimension }}</div>
+
+        <hr>
+
+        <div class="item"><strong>Mejor posición encontrada:</strong> {{ best_position }}</div>
+        <div class="item"><strong>Valor óptimo:</strong> {{ best_value }}</div>
+
+        {% if plot_url_1 %}
+            <img src="{{ plot_url_1 }}" alt="Gráfico 2D del PSO">
+        {% else %}
+            <p>No se generó gráfico.</p>
+        {% endif %}
+
+        {% if image_base64 %}
+            <img src="data:image/png;base64,{{ image_base64 }}" alt="Gráfico 3D del PSO">
+        {% else %}
+            <p>No se generó gráfico.</p>
+        {% endif %}
+
+        <div class="volver">
+            <a href="{% url 'pso_form' %}">← Volver al formulario</a>
+        </div>
+    </div>
+</body>
+</html>

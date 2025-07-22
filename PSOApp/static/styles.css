@@ -1,0 +1,155 @@
+/* 0. Reset & Base */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 1. Variables */
+:root {
+  --bg: #181A20;
+  --surface: #23262F;
+  --surface-alt: #22242B;
+  --text-primary: #E5E7EB;
+  --text-secondary: #A1A1AA;
+  --accent: #3B82F6;
+  --accent-alt: #2563EB;
+  --input-bg: #23262F;
+  --border-radius: 18px;
+  --shadow: 0 6px 24px rgba(0,0,0,0.25);
+}
+
+/* 2. Contenedor Principal */
+.container {
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem;
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 3. Encabezados */
+.titulo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+.subtitulo {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+/* 4. Grid de Formulario */
+.form-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: .5rem;
+  color: var(--text-secondary);
+  font-size: .97rem;
+  font-weight: 500;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: .8rem 1rem;
+  border: 1.5px solid #23262F;
+  border-radius: var(--border-radius);
+  background: var(--input-bg);
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus {
+  border: 1.5px solid var(--accent);
+}
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23A1A1AA' stroke-width='2' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+
+/* 5. Botones */
+.btn {
+  display: inline-block;
+  padding: .85rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--accent);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background .18s, box-shadow .18s;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+  margin-top: 1rem;
+}
+.btn:hover, .btn:focus {
+  background: var(--accent-alt);
+  outline: none;
+}
+
+/* 6. Tarjetas y Mensajes */
+.card {
+  background: var(--surface-alt);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  padding: 2rem 1.5rem;
+  color: var(--text-primary);
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+#mensajes {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* 7. Imagen Intro */
+.Introduccion img {
+  display: block;
+  max-width: 120px;
+  height: auto;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  background: #1a1c22;
+  padding: 0.5rem;
+}
+
+/* 8. Responsivo */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .titulo { font-size: 2rem; }
+  .card { padding: 1.2rem 0.5rem; }
+}

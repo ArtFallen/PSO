@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <title>Algoritmo PSO</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+<section id="Seleccionar-funcion">
+    <h1 class="titulo">Algoritmo PSO</h1>
+    <div class="Introduccion">
+        <img src="{% static 'imagenes/swarm.png' %}" alt="swarm"/>
+    </div>
+    <h2 class="subtitulo">Elige la funcion que quieras optimizar:</h2>
+
+    <form method="POST" action="{% url 'procesar_pso' %}">
+        {% csrf_token %}
+        <div class="select-wrapper">
+            <div class="form-group">
+                <label for="funcion">Función:</label>
+                <select name="funcion" id="funcion" required>
+                    <option value="">Seleccionar</option>
+                    <option value="gr">Griewank</option>
+                    <option value="sp">Sphere</option>
+                    <option value="ra">Rastrigin</option>
+                    <option value="st">Styblinski</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="iteraciones">Máximo de iteraciones:</label>
+                <input type="number" name="iteraciones" min="1" id="iteraciones" required>
+            </div>
+
+            <div class="form-group">
+                <label for="particulas">Número de partículas:</label>
+                <input type="number" name="particulas" min="1" id="particulas" required>
+            </div>
+            <div class="form-group">
+                <label for="minimo">Mínimo:</label>
+                <input type="number" name="minimo" id="minimo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="maximo">Máximo:</label>
+                <input type="number" name="maximo" id="maximo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dimension">Dimensión:</label>
+                <input type="number" name="dimension" min="1" id="dimension" required>
+            </div>
+            <button type="submit" class="btn">Seleccionar</button>
+        </div>
+    </form>
+</section>
+</body>
+</html>
