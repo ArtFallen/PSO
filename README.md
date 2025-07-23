@@ -8,7 +8,44 @@ El sistema permite optimizar diferentes funciones objetivo clásicas de benchmar
 El diseño es modular, claro y extensible, facilitando futuras mejoras como nuevas funciones, topologías o estrategias de actualización de partículas.
 
 ---
-
+classDiagram
+     Swarm "1" -- "1" Particle : contiene
+     Swarm "1" -- "1" ObjectiveFunctions : Utiliza
+```mermaid
+    class ObjectiveFunctions{
+      +rastrigin_function()
+      +sphere_function()
+      +griewank_function()
+      +styblinski_tang_function()
+    }
+    class Particle{
+      +float lower_limit
+      +float upper_limit
+      +int dimensions
+      +float position
+      +float pbest_position
+      +float pbest_value
+      +float velocity
+      +__init__()
+      +update_velocity()
+      +update_position()
+      +__repr__():
+    }
+    class Swarm{
+      +int n_particles
+      +int max_iter
+      +int dimensions
+      +ObjectiveFunctions instanciated_fitness_function 
+      +ObjectiveFunctions fitness_function
+      +float gbest_position 
+      +float gbest_value
+      +list complete_swarm
+      +__init__()
+      +update_gbest_and_pbest()
+      +update_velocity_to_move_particles()
+      +iterating_the_process()
+    }
+```
 ## Características
 
 - Implementación de PSO con:
