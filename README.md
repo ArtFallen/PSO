@@ -8,11 +8,12 @@ El sistema permite optimizar diferentes funciones objetivo clásicas de benchmar
 El diseño es modular, claro y extensible, facilitando futuras mejoras como nuevas funciones, topologías o estrategias de actualización de partículas.
 
 ---
+
+     
+```mermaid
 classDiagram
      Swarm "1" -- "1" Particle : contiene
      Swarm "1" -- "1" ObjectiveFunctions : Utiliza
-     
-```mermaid
     class ObjectiveFunctions{
       +rastrigin_function()
       +sphere_function()
