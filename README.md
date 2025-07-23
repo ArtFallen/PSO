@@ -121,6 +121,9 @@ Instalación de dependencias (opcional):
 ```bash
 pip install numpy matplotlib pytest
 ```
+```bash
+pip install django
+```
 
 ## Ejecución
 
