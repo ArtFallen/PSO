@@ -68,20 +68,43 @@ classDiagram
 ---
 
 ## Estructura del proyecto
-
 - pso_project/
-- │
-- ├── src/
-- │ ├── particle.py # Clase Particle: representa una partícula individual.
-- │ ├── swarm.py # Clase Swarm: representa y gestiona el enjambre completo.
-- │ ├── objective_functions.py # Funciones objetivo (Rastrigin, Sphere, Griewank, Styblinski-Tang).
-- │ ├── utils.py # (Opcional) Funciones de visualización 2D y 3D.
-- │ └── main.py # Script principal para ejecutar experimentos PSO.
-- │
-- ├── tests/
-- │ └── test_swarm.py # Pruebas unitarias para Swarm y Particle.
-- │
-- └── README.md # Este archivo.
+-│         
+-├── PSO/                      # Proyecto Django (configuración principal)
+-│ ├── __init__.py             # Marca este directorio como un paquete Python
+-│ ├── asgi.py                 # Configuración para ASGI (servidores asíncronos)
+-│ ├── settings.py             # CONFIGURACIÓN principal del proyecto Django
+-│ ├── urls.py                 # Rutas a nivel proyecto (distribuye a apps)
+-│ ├── wsgi.py                 # Configuración para WSGI (servidores como Gunicorn)
+-│ 
+-├── PSOApp/                 # Aplicación Django (donde está tu lógica PSO)
+-│ ├── __init__.py                 # Marca como paquete Python
+-│ ├── admin.py                   # Registro de modelos para el panel admin
+-│ ├── apps.py                    # Configuración de la app en Django
+-│ ├── models.py                  # Modelos de base de datos (si usas ORM)
+-│ ├── urls.py                    # Rutas específicas de esta app
+-│ ├── views.py                   # Vistas: lógica que responde a peticiones web
+-│ │
+-│ ├── migrations/                # Archivos de migración de la base de datos
+-│ 
+-│  ├── src/
+-│   ├── __init__.py               
+-│   ├── particle.py              
+-│   ├── swarm.py                
+-│   ├── objective_functions.py   
+-│   ├── utils.py                 
+-│   └── main.py                  
+-│ 
+-│ ├── static/                    # Archivos estáticos locales a esta app
+-│ ├── templates/                 # HTMLs (renderizados desde las vistas)
+-│ └── tests/                     # Pruebas unitarias de esta app
+
+├── static/                 # Archivos estáticos (CSS, JS, imágenes)
+├── db.sqlite3              # Base de datos SQLite por defecto de Django
+├── manage.py               # Script principal para ejecutar comandos Django
+├── pyvenv.cfg              # Configuración del entorno virtual de Python
+└── README.md               # Documentación del proyecto
+
 
 ---
 
