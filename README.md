@@ -11,6 +11,7 @@ El diseño es modular, claro y extensible, facilitando futuras mejoras como nuev
 classDiagram
      Swarm "1" -- "1" Particle : contiene
      Swarm "1" -- "1" ObjectiveFunctions : Utiliza
+     
 ```mermaid
     class ObjectiveFunctions{
       +rastrigin_function()
