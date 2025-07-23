@@ -125,35 +125,6 @@ pip install numpy matplotlib pytest
 pip install django
 ```
 
-## Ejecución
-
-Para correr el ejemplo principal:
-
-```bash
-python -m src.main
-```
-
-Esto inicializa varios enjambres con diferentes funciones objetivo y dimensiones, ejecutando PSO para cada uno.
-
-## Tests
-Para correr los tests unitarios:
-```cmd
-pytest tests/test_swarm.py
-```
-o
-```cmd
-python -m tests.test_swarm
-```
-Esto valida:
-
-Correcta ejecución de PSO en:
-
-- 1 dimensión (funciones: Rastrigin, Sphere, Griewank, Styblinski-Tang).
-
-- 2 dimensiones (funciones: Rastrigin, Sphere, Griewank, Styblinski-Tang).
-
-Convergencia esperada (mínimos locales o globales conocidos).
-
 ## Visualización
 
 Las funciones de visualización están disponibles en `utils.py`:
