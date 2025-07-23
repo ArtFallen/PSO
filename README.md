@@ -68,6 +68,7 @@ classDiagram
 ---
 
 ## Estructura del proyecto
+```
 - pso_project/
 -│         
 -├── PSO/                      # Proyecto Django (configuración principal)
@@ -104,7 +105,7 @@ classDiagram
 ├── manage.py               # Script principal para ejecutar comandos Django
 ├── pyvenv.cfg              # Configuración del entorno virtual de Python
 └── README.md               # Documentación del proyecto
-
+```
 
 ---
 
